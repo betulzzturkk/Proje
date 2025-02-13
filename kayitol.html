@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffffff;  
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            color: black;  
+            font-size: 2.5em; /* Başlık boyutu büyütüldü */
+            margin-bottom: 20px; /* Başlık alt boşluğu */
+        }
+        .signup-form {
+            background-color: white;
+            padding: 30px; /* İç boşluk artırıldı */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+            width: 400px; /* Form genişliği artırıldı */
+        }
+        input {
+            padding: 15px; /* İç boşluk artırıldı */
+            margin: 15px 0; /* Dış boşluk artırıldı */
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ae8fe7;
+            font-size: 1.1em; /* Yazı boyutu büyütüldü */
+        }
+        button {
+            padding: 15px 20px; /* İç boşluk artırıldı */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.2em; /* Buton yazı boyutu büyütüldü */
+            margin-top: 10px; /* Buton üst boşluğu */
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Seçenek butonları stil ayarları */
+        .option-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Butonlar arasında boşluk artırıldı */
+            margin-bottom: 20px; /* Butonların alt boşluğu */
+        }
+
+        .option-buttons button {
+            padding: 15px 25px; /* İç boşluk artırıldı */
+            font-size: 1.1em; /* Yazı boyutu büyütüldü */
+            background-color: #4CAF50; /* Arka plan rengi */
+            color: white; /* Yazı rengi */
+            border: none; /* Kenarlık yok */
+            border-radius: 5px; /* Köşeleri yuvarlak yap */
+            cursor: pointer; /* Fare imleci el işareti olsun */
+            transition: background-color 0.3s, transform 0.3s; /* Renk değişimi ve büyütme animasyonu */
+        }
+
+        .option-buttons button:hover {
+            background-color: #45a049; /* Fareyle gelindiğinde renk değişimi */
+            transform: scale(1.05); /* Fareyle gelindiğinde butonu büyüt */
+        }
+    </style>
+</head>
+<body>
+    <h1>Yeni Kullanıcı Kaydı</h1>
+    <div class="signup-form">
+        <form>
+            <!-- Öğrenci ve Veli Seçenekleri -->
+            <div class="option-buttons">
+                <button type="button" onclick="selectUserType('student')">Öğrenci</button>
+                <button type="button" onclick="selectUserType('parent')">Veli</button>
+            </div>
+
+            <!-- Kullanıcı Adı -->
+            <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+
+            <!-- E-posta -->
+            <input type="email" id="email" placeholder="E-posta" required>
+
+            <!-- Şifre -->
+            <input type="password" id="password" placeholder="Şifre" required>
+
+            <!-- Kayıt Ol Butonu -->
+            <button type="submit" onclick="signup()">Kaydol</button>
+        </form>
+    </div>
+
+    <script>
+        let userType = ''; // Kullanıcı tipini saklamak için değişken
+
+        // Kullanıcı tipini seçme fonksiyonu
+        function selectUserType(type) {
+            userType = type;
+            alert(type === 'student' ? 'Öğrenci olarak kayıt olunuyor.' : 'Veli olarak kayıt olunuyor.');
+        }
+
+        // Kayıt olma fonksiyonu
+        function signup() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (!userType) {
+                alert("Lütfen önce Öğrenci veya Veli seçeneğini seçin.");
+                return;
+            }
+
+            if (username && email && password) {
+                alert("Kayıt başarıyla tamamlandı!");
+                // Burada kayıt işlemi tamamlandıktan sonra yönlendirme yapılabilir.
+                window.location.href = "giris.html"; // Örnek: Giriş sayfasına yönlendirme
+            } else {
+                alert("Lütfen tüm alanları doldurun.");
+            }
+        }
+    </script>
+</body>
+</html>

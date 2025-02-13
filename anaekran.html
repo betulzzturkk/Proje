@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8"> <!-- Karakter kodlaması UTF-8 olarak ayarlandı -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için viewport ayarı -->
+    <title>Ana Sayfa</title> <!-- Sayfa başlığı -->
+    <style>
+        /* Genel sayfa stil ayarları */
+        body {
+            font-family: 'Impact', sans-serif; /* Yazı tipi olarak Impact kullanıldı */
+            margin: 0; /* Sayfa kenar boşluklarını sıfırla */
+            padding: 0; /* Sayfa iç boşluklarını sıfırla */
+            height: 100vh; /* Sayfa yüksekliği viewport yüksekliği kadar */
+            display: flex; /* Flexbox kullanarak içeriği ortala */
+            flex-direction: column; /* İçeriği dikey olarak sırala */
+            justify-content: flex-start; /* İçeriği üstten başlat */
+            align-items: center; /* Yatayda ortalama */
+            text-align: center; /* Metinleri ortala */
+            background-image: url('görseller/arka5.jpeg'); /* Arka plan resmi */
+            background-size: cover; /* Arka plan resmi sayfayı tamamen kaplasın */
+            background-position: center; /* Arka plan resmi ortada olsun */
+            background-repeat: no-repeat; /* Arka plan resmi tekrar etmesin */
+            color: rgb(254, 249, 253); /* Yazı rengi beyaz */
+        }
+
+        /* Ana başlık stil ayarları */
+        h1 {
+            font-size: 7em; /* Başlık boyutu */
+            margin-top: 200px; /* Başlık üst boşluğu */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Başlığa gölge efekti ekle */
+            font-weight: bold; /* Yazıyı kalın yap */
+            
+        }
+
+        /* Buton stil ayarları */
+        .giris-butonu {
+            padding: 15px 30px; /* İç boşluk */
+            font-size: 1.5em; /* Yazı boyutu */
+            background-color: #4CAF50; /* Arka plan rengi */
+            color: white; /* Yazı rengi */
+            border: none; /* Kenarlık yok */
+            border-radius: 5px; /* Köşeleri yuvarlak yap */
+            cursor: pointer; /* Fare imleci el işareti olsun */
+            transition: background-color 0.3s; /* Renk değişimi animasyonu */
+            margin-top: 20px; /* Buton üst boşluğu */
+        }
+
+        /* Butona fareyle gelindiğinde stil ayarları */
+        .giris-butonu:hover {
+            background-color: #45a049; /* Fareyle gelindiğinde renk değişimi */
+        }
+    </style>
+</head>
+<body>
+    <h1>OTİZM EĞİTİM PLATFORMU</h1> <!-- Ana başlık -->
+    <button class="giris-butonu" onclick="window.location.href='girisekran.html'">Giriş Yap</button> <!-- Giriş butonu -->
+</body>
+</html>
