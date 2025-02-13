@@ -7,7 +7,7 @@ Kullanıcılar, görseller ve sesler eşliğinde interaktif bir şekilde öğren
 Frontend: HTML, CSS, JavaScript
 Backend: C# ve ASP.NET
 Veritabanı: SQL
-Ekstra: Yapay zeka destekli chatbot
+Ekstra: Yapay zeka destekli chatbot.
 📌 Projenin Özellikleri
 ✅ Renkleri Öğrenme: Renkleri sesli ve görsel destek ile öğretir.
 ✅ Hayvanları Tanıma: Hayvan görselleri ve seslerini içeren interaktif eğitim.
